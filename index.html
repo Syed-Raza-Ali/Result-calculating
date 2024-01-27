@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grading System</title> <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="heading">Result Calculating System</h1>
+    <div class="row">
+      <div class="col-12 col-md-8 left">
+        <input type="number" class="form-control" id="total" placeholder="Enter your total marks"> <br />
+        <input type="number" class="form-control" id="obtained" placeholder="Enter your obtained marks"> <br />
+        <button type="button" class="btn btn-info" onclick="getres()">See Result</button>
+
+      </div>
+      <div class="col-12 col-md-4 right">
+        <table class="vertical">
+          <tr>
+            <th>Your Total Marks</th>
+            <th>Your Obtained Marks</th>
+            <th>Your Percentage</th>
+            <th>Your <br/> Grade</th>
+          </tr>
+          <tr>
+            <th id="tot"></th>
+            <th id="obt"></th>
+            <th id="per"></th>
+            <th id="grade"></th>
+          </tr>
+        </table>
+        <table class="horizontal">
+          <tr>
+            <td>Your Total Marks</td>
+            <td id="tot"></td>
+          </tr>
+          <tr>
+            <td>Your Obtained Marks</td>
+            <td id="obt"></td>
+          </tr>
+          <tr>
+            <td>Your Percentage</td>
+            <td id="per"></td>
+          </tr>
+          <tr>
+            <td>Your <br/> Grade</td>
+            <td id="grade"></td>
+          </tr>
+          </table>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script> -->
+</body>
+
+</html>
