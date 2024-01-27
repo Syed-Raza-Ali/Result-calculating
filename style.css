@@ -16,8 +16,10 @@
     display: grid;
     justify-content: center;
 }
-
-input {
+.form-controll{
+    display: none;
+}
+.form-control {
     width: 400px;
     padding: 3px 7px;
     height: 50px;
@@ -37,8 +39,11 @@ input {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3rem;
 }
-
-button {
+.btn2 {
+    display: none;
+}
+.btn1 {
+    display: block;
     padding: 10px 20px;
     background-color: #395886;
     color: #fff;
@@ -80,14 +85,41 @@ td {
 }
 
 @media (max-width: 600px) {
-
+    .btn1 {
+        display: none;
+    }
+    .btn2 {
+        width: 200px;
+        display: inline ;
+        margin-left: 17px;
+        padding: 10px 20px;
+        background-color: #395886;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .form-controll {
+        display: block;
+        width: 250px;
+        padding: 3px 7px;
+        height: 50px;
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .form-control {
+        display: none;
+        
+    }
     .left {
         margin-top: 50px;
     }
 
-    input {
-        width: 100%;
-    }
+   
 
     .right {
         margin-right: 0;
@@ -108,9 +140,8 @@ td {
 
     tr td {
         padding-top: 14px;
-        width: 100px;
+        width: 110px;
         height: 80px;
-        border: 1px solid #ddd;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
     }
