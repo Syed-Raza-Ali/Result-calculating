@@ -17,10 +17,10 @@ function getres() {
         if (roundper <= 100 && roundper >= 90) {
             document.getElementById("grade").innerHTML = 'A+'
 
-        } else if (roundper < 90 && roundper > 80) {
+        } else if (roundper < 90 && roundper >= 80) {
             document.getElementById("grade").innerHTML = 'A'
 
-        } else if (roundper < 80 && roundper > 70) {
+        } else if (roundper < 80 && roundper >= 70) {
             document.getElementById("grade",).innerHTML = 'B'
 
         } else if (roundper < 70) {
