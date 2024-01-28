@@ -1,11 +1,14 @@
+let data = document.getElementById("data")
 function getres() {
     let total = parseInt(document.getElementById("total").value)
     let obtained = parseInt(document.getElementById("obtained").value)
     if (total < obtained) {
         alert("Enter correct marks !")
+        saveData()
     }
     else if(isNaN(total) || isNaN(obtained)){
-        alert("Please enter a correct numeric value!")
+        alert("Please enter valid numeric values for total and obtained marks!")
+        saveData()
     }
     else {
         document.getElementById("obt").innerHTML = obtained
@@ -16,23 +19,30 @@ function getres() {
 
         if (roundper <= 100 && roundper >= 90) {
             document.getElementById("grade").innerHTML = 'A+'
+            saveData()
         } else if (roundper < 90 && roundper > 80) {
             document.getElementById("grade").innerHTML = 'A'
+            saveData()
         } else if (roundper < 80 && roundper > 70) {
             document.getElementById("grade",).innerHTML = 'B'
+            saveData()
         } else if (roundper < 70) {
             document.getElementById("grade",).innerHTML = 'Better luck next time'
+            saveData()
         }
     }
+    saveData()
 }
 function getress() {
     let totall = parseInt(document.getElementById("totall").value)
     let obtainedd = parseInt(document.getElementById("obtainedd").value)
     if (totall < obtainedd) {
         alert("Enter correct marks !")
+        saveData()
     }
     else if(isNaN(totall) || isNaN(obtainedd)){
         alert("Please enter a correct numeric value!")
+        saveData()
     }
     else {
     document.getElementById("obtt").innerHTML = obtainedd
@@ -40,21 +50,27 @@ function getress() {
     let percentagee = obtainedd / totall * 100
     let roundperr = percentagee.toFixed(2)
     document.getElementById("perr").innerHTML = roundperr + '%'
+
     if (roundperr <= 100 && roundperr >= 90) {
         document.getElementById("graide").innerHTML = 'A+'
+        saveData()
     } else if (roundperr < 90 && roundperr > 80) {
         document.getElementById("graide").innerHTML = 'A'
+        saveData()
     } else if (roundperr < 80 && roundperr > 70) {
         document.getElementById("graide").innerHTML = 'B'
+        saveData()
     } else if (roundperr < 70) {
         document.getElementById("graide").innerHTML = 'Better luck next time'
+        saveData()
     }
     }
+    saveData()
 }
-// else if (roundper < 70 && roundper > 60) {
-//     document.getElementById("grade").innerHTML = 'C'
-// } else if (roundper < 60 && roundper > 50) {
-//     document.getElementById("grade").innerHTML = 'D'
-// } else if (roundper < 50) {
-//     document.getElementById("grade").innerHTML = 'Better luck next time'
-// }
+function saveData(){
+    localStorage.setItem("data",  data.innerHTML)
+}
+function showTask(){
+    data.innerHTML = localStorage.getItem("data")
+}
+showTask()
